@@ -1,3 +1,10 @@
+# groupe MIASHS 1
+# Akram AMRAOUI
+# Paul ROUILLIER
+# Hajar ZAAZOUA 
+# https://github.com/uvsq22106749/Projet-Taquin
+
+
 import tkinter as tk
 from random import choice
 
