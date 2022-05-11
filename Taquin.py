@@ -26,7 +26,7 @@ def mouvement(nombre):
     global mat,historique
     espace= mat.index(0)
     nb = mat.index(nombre)
-    #teste si 0 et le nombre sont sur la même ligne
+    #teste si 0 et le nombre sont sur la même ligne 
     if espace//4 == nb//4:
         #test s'ils sont à coté
         if abs(espace-nb)==1:
