@@ -8,7 +8,7 @@ import tkinter as tk
 from random import choice
 
 
-mat_init=[1, 2, 3, 4, 5, 6, 7, 8, 9 ,10, 11, 12, 13, 14, 15]
+mat_init=[i for i in range(1,16)]
 
 #case vide
 mat_init.append(0)
@@ -21,24 +21,24 @@ def grille():
     print(mat[8:12])
     print(mat[12:16])
 
-def mouvement(number):
-    print(number)
+def mouvement(nombre):
+    print(nombre)
     global mat,historique
-    space= mat.index(0)
-    nb = mat.index(number)
+    espace= mat.index(0)
+    nb = mat.index(nombre)
     #teste si 0 et le nombre sont sur la même ligne
-    if space//4 == nb//4:
+    if espace//4 == nb//4:
         #test s'ils sont à coté
-        if abs(space-nb)==1:
-            historique.append(number)
-            mat[space]=number
+        if abs(espace-nb)==1:
+            historique.append(nombre)
+            mat[espace]=nombre
             mat[nb]=0
     #teste si 0 et le nombre sont sur la même colonne
-    elif space%4 == nb%4:
+    elif espace%4 == nb%4:
         #test s'ils sont à coté
-        if abs(space//4-nb//4)==1:
-            historique.append(number)
-            mat[space]=number
+        if abs(espace//4-nb//4)==1:
+            historique.append(nombre)
+            mat[espace]=nombre
             mat[nb]=0
 def derniermouvement():
     global historique
